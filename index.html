@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sri Krishna Academy | Government Job Preparation</title>
+  <link rel="icon" href="logo.png" style="border-radius: 50%;">
+  <meta name="description" content="Sri Krishna Academy – Premier coaching institute for government job preparation in West Bengal. WBPSC, SSC, RRB, Banking, Police & TET.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --navy:        #0b2c5f;
+      --navy-mid:    #0e3573;
+      --navy-light:  #133f87;
+      --navy-dark:   #071a3a;
+      --gold:        #d4a017;
+      --gold-light:  #e8b830;
+      --gold-pale:   #f5e6b0;
+      --gold-dark:   #a87c0e;
+      --white:       #ffffff;
+      --off-white:   #f7f5ef;
+      --cream:       #fdf9f0;
+      --text-body:   #374151;
+      --text-muted:  #6b7280;
+      --text-faint:  #9ca3af;
+      --border:      rgba(11,44,95,0.1);
+      --shadow-sm:   0 2px 12px rgba(11,44,95,0.08);
+      --shadow-md:   0 8px 32px rgba(11,44,95,0.12);
+      --shadow-lg:   0 20px 60px rgba(11,44,95,0.16);
+      --transition:  0.3s cubic-bezier(0.4,0,0.2,1);
+      --radius:      12px;
+    }
+
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; font-size:16px; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-body);
+      background: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display:block; max-width:100%; }
+    a  { text-decoration:none; }
+    ul { list-style:none; }
+    button { cursor:pointer; font-family:inherit; }
+    input,select,textarea { font-family:inherit; }
+
+    .page { display:none; }
+    .page.active { display:block; animation: pgFade 0.42s ease forwards; }
+    @keyframes pgFade {
+      from { opacity:0; transform:translateY(18px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 9000;
+      padding: 0 2rem;
+      transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease;
+    }
+    .navbar.scrolled {
+      background: var(--navy-dark);
+      box-shadow: 0 4px 30px rgba(7,26,58,0.5);
+    }
+    .navbar.scrolled .nav-inner { height: 64px; }
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      height: 78px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 1rem;
+      transition: height 0.3s ease;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .logo-emblem { width: 46px; height: 46px; flex-shrink: 0; }
+    .logo-text-block .l-name {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+    .logo-text-block .l-sub {
+      font-size: 0.62rem;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+    .nav-menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+    }
+    .nav-menu li { position: relative; }
+    .nav-link {
+      display: inline-block;
+      padding: 0.3rem 1.1rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.78);
+      cursor: pointer;
+      position: relative;
+      transition: color var(--transition), transform var(--transition);
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 50%; right: 50%;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+      transition: left 0.35s ease, right 0.35s ease;
+    }
+    .nav-link:hover, .nav-link.is-active { color: var(--gold); transform: translateY(-1px); }
+    .nav-link:hover::after, .nav-link.is-active::after { left: 1.1rem; right: 1.1rem; }
+    .nav-admit {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--gold);
+      color: var(--navy-dark);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.5rem 1.1rem;
+      border-radius: 100px;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .nav-admit:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212,160,23,0.4);
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 32px; height: 32px;
+      cursor: pointer;
+      padding: 2px;
+    }
+    .hamburger span {
+      display: block; height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ── SHARED UTILITIES ── */
+    .section        { padding: 5.5rem 2rem; }
+    .section-sm     { padding: 3.5rem 2rem; }
+    .section-inner {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+    .eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--gold); flex-shrink: 0; }
+    .s-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 2.9rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.12;
+      margin-bottom: 1rem;
+    }
+    .s-title .em { color: var(--gold); font-style: italic; }
+    .s-desc { font-size: 1rem; color: var(--text-muted); line-height: 1.8; max-width: 560px; }
+    .sec-head { margin-bottom: 3.5rem; }
+    .sec-head.center { text-align: center; }
+    .sec-head.center .eyebrow  { justify-content: center; }
+    .sec-head.center .s-desc   { margin: 0 auto; }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.9rem 2rem;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .btn-gold { background: var(--gold); color: var(--navy-dark); box-shadow: 0 4px 20px rgba(212,160,23,0.3); }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(212,160,23,0.45); }
+    .btn-gold:active { transform: translateY(0); }
+    .btn-ghost { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.38); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); transform: translateY(-2px); }
+    .btn-outline-navy { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
+    .btn-outline-navy:hover { background: var(--navy); color: var(--white); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .btn-sm { padding: 0.6rem 1.25rem; font-size: 0.78rem; }
+
+    /* ── REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(140deg, var(--navy-dark) 0%, var(--navy) 45%, var(--navy-mid) 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-decor { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    .deco-feather { position: absolute; right: -3%; top: 50%; transform: translateY(-50%); width: min(48%, 550px); opacity: 0.065; }
+    .ring { position: absolute; border-radius: 50%; border: 1px solid rgba(212,160,23,0.18); }
+    .ring-1 { width:680px; height:680px; top:-180px; right:-120px; }
+    .ring-2 { width:460px; height:460px; top:-80px; right:-20px; border-color:rgba(212,160,23,0.1); }
+    .ring-3 { width:300px; height:300px; bottom:-60px; left:-60px; border-color:rgba(255,255,255,0.06); }
+    .dot-grid { position: absolute; top: 22%; right: 28%; display: grid; grid-template-columns: repeat(6,1fr); gap: 13px; }
+    .dot-grid span { width: 3px; height: 3px; border-radius: 50%; background: rgba(212,160,23,0.3); display: block; }
+    .hero-stripe { position: absolute; width: 4px; height: 200px; background: linear-gradient(to bottom, transparent, var(--gold), transparent); opacity: 0.35; left: 5%; top: 20%; }
+    .hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 9rem 2rem 5rem; width: 100%; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid rgba(212,160,23,0.4);
+      background: rgba(212,160,23,0.1);
+      color: var(--gold-light);
+      padding: 0.38rem 1rem; border-radius: 100px;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      margin-bottom: 1.6rem;
+      animation: fadeUp 0.6s ease 0.05s both;
+    }
+    .hero-badge .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.5; transform:scale(1.4); } }
+    .hero-main-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(3rem, 7.5vw, 6.2rem);
+      font-weight: 700; color: var(--white);
+      line-height: 0.95; letter-spacing: -0.01em;
+      margin-bottom: 0.6rem;
+      animation: fadeUp 0.65s ease 0.15s both;
+    }
+    .hero-main-title .gold-word { color: var(--gold); display: block; font-style: italic; }
+    .hero-bengali {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.3rem, 2.8vw, 1.85rem);
+      font-style: italic; color: rgba(255,255,255,0.72);
+      margin-bottom: 1rem;
+      animation: fadeUp 0.65s ease 0.25s both;
+    }
+    .hero-bengali em { color: var(--gold-light); font-style: normal; }
+    .hero-sub {
+      font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+      color: rgba(255,255,255,0.56); max-width: 500px;
+      line-height: 1.78; margin-bottom: 2.4rem;
+      animation: fadeUp 0.65s ease 0.35s both;
+    }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3.5rem; animation: fadeUp 0.65s ease 0.45s both; }
+    .hero-kpi-row {
+      display: flex; flex-wrap: wrap; gap: 2.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      animation: fadeUp 0.65s ease 0.55s both;
+    }
+    .kpi { text-align: center; }
+    .kpi-num { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .kpi-label { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+
+    /* ── WHY CHOOSE US ── */
+    .why-bg { background: var(--off-white); }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1.4rem; }
+    .feat-card {
+      background: var(--white); border-radius: var(--radius);
+      padding: 2rem 1.8rem; border: 1px solid var(--border);
+      position: relative; overflow: hidden;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    .feat-card::after { content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 3px; background: var(--gold); transition: width 0.4s ease; }
+    .feat-card:hover { transform:translateY(-7px); box-shadow:var(--shadow-lg); }
+    .feat-card:hover::after { width:100%; }
+    .feat-icon-wrap { width: 54px; height: 54px; background: rgba(11,44,95,0.06); border-radius: 10px; display: flex; align-items:center; justify-content:center; font-size: 1.6rem; margin-bottom: 1.2rem; transition: background 0.3s ease; }
+    .feat-card:hover .feat-icon-wrap { background:rgba(212,160,23,0.12); }
+    .feat-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 0.6rem; }
+    .feat-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.72; }
+
+    /* ── COURSES ── */
+    .courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px,1fr)); gap: 1.4rem; }
+    .course-card { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); transition: transform 0.35s ease, box-shadow 0.35s ease; background: var(--white); }
+    .course-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+    .cc-top { background: var(--navy); padding: 1.6rem; position: relative; overflow: hidden; }
+    .cc-top::after { content: ''; position: absolute; top: -40px; right: -40px; width: 120px; height: 120px; border-radius: 50%; background: rgba(212,160,23,0.1); }
+    .cc-top::before { content: ''; position: absolute; bottom: -20px; left: -20px; width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.03); }
+    .cc-badge { display: inline-block; background: rgba(212,160,23,0.2); color: var(--gold-light); border: 1px solid rgba(212,160,23,0.35); padding: 0.18rem 0.7rem; border-radius: 100px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.5rem; position: relative; z-index:1; }
+    .cc-name { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 700; color: var(--white); position: relative; z-index:1; }
+    .cc-body { padding: 1.6rem; }
+    .cc-list { margin-bottom: 1.25rem; }
+    .cc-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 0.875rem; color: var(--text-muted); padding: 0.33rem 0; border-bottom: 1px solid rgba(11,44,95,0.05); }
+    .cc-list li:last-child { border-bottom:none; }
+    .cc-list li::before { content:'✓'; color:var(--gold); font-weight:700; flex-shrink:0; }
+
+    /* ── STATS ── */
+    .success-bg {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, var(--navy-mid) 100%);
+      position: relative; overflow: hidden;
+    }
+    .success-bg::before { content: ''; position: absolute; top:-150px; right:-150px; width:500px; height:500px; border-radius:50%; background: radial-gradient(circle, rgba(212,160,23,0.06) 0%, transparent 70%); }
+    .success-bg::after { content: ''; position: absolute; bottom:-100px; left:-100px; width:350px; height:350px; border-radius:50%; background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%); }
+    .success-bg .s-title { color:var(--white); }
+    .success-bg .s-desc  { color:rgba(255,255,255,0.6); }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 1.4rem; position: relative; z-index:1; }
+    .stat-card { border: 1px solid rgba(212,160,23,0.2); border-radius: var(--radius); padding: 2rem 1.2rem; text-align: center; background: rgba(255,255,255,0.03); transition: all 0.3s ease; }
+    .stat-card:hover { background: rgba(212,160,23,0.08); border-color: rgba(212,160,23,0.45); transform: translateY(-5px); }
+    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 3.2rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .stat-lbl { font-size: 0.76rem; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.5rem; }
+
+    /* ── GALLERY PREVIEW ── */
+    .gallery-preview-grid { display: grid; grid-template-columns: repeat(3,1fr); grid-template-rows: 220px 220px; gap: 0.9rem; }
+    .gp-item { overflow: hidden; border-radius: 10px; cursor: pointer; position: relative; }
+    .gp-item:nth-child(1) { grid-column:span 2; grid-row:span 1; }
+    .gp-item:nth-child(4) { grid-column:span 2; }
+    .gp-item img { width:100%; height:100%; object-fit:cover; transition: transform 0.55s ease; }
+    .gp-item:hover img { transform:scale(1.07); }
+    .gp-overlay { position: absolute; inset: 0; background: rgba(7,26,58,0.55); display: flex; align-items:center; justify-content:center; opacity: 0; transition: opacity 0.3s ease; }
+    .gp-item:hover .gp-overlay { opacity:1; }
+    .gp-overlay-icon { width: 46px; height: 46px; border: 2px solid rgba(255,255,255,0.8); border-radius: 50%; display: flex; align-items:center; justify-content:center; font-size: 1.1rem; color: white; }
+    .gallery-footer { text-align:center; margin-top:2.5rem; }
+
+    /* ── CTA BANNER ── */
+    .cta-bg { background: linear-gradient(130deg, var(--navy) 0%, var(--navy-mid) 100%); text-align: center; position: relative; overflow: hidden; }
+    .cta-bg::before { content:''; position:absolute; inset:0; background-image: radial-gradient(circle at 15% 50%, rgba(212,160,23,0.1), transparent 55%), radial-gradient(circle at 85% 50%, rgba(212,160,23,0.07), transparent 55%); }
+    .cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers horizontally */
+  text-align: center;    /* centers text */
+}
+    .cta-feather-icon { width: 48px; height: 48px; margin: 0 auto 1.4rem; }
+    .cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--white); margin-bottom: 1rem; line-height: 1.15; }
+    .cta-title em { color:var(--gold); font-style:italic; }
+    .cta-sub { font-size: 1rem; color: rgba(255,255,255,0.65); max-width: 480px; margin: 0 auto 2.2rem; line-height: 1.75; }
+
+    /* ── INNER PAGE HERO ── */
+    .inner-hero { background: linear-gradient(140deg, var(--navy-dark), var(--navy)); padding: 8.5rem 2rem 4rem; text-align: center; position: relative; overflow: hidden; }
+    .inner-hero::after { content:''; position:absolute; bottom:0; left:0; right:0; height:80px; background: linear-gradient(to bottom, transparent, var(--white)); pointer-events:none; }
+    .inner-hero h1 { font-family: 'Cinzel', serif; font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; color: var(--white); margin-bottom: 0.8rem; }
+    .inner-hero h1 em { color:var(--gold); font-style:italic; }
+    .inner-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.62); max-width: 580px; margin: 0 auto; }
+
+    /* ── ABOUT ── */
+    .about-split { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5rem; align-items: center; }
+    .about-img-block { position:relative; }
+    .about-img-block img { border-radius:16px; box-shadow:var(--shadow-lg); }
+    .about-badge-box { position: absolute; bottom: -22px; right: -22px; background: var(--gold); color: var(--navy-dark); padding: 1.5rem 1.8rem; border-radius: 10px; text-align: center; box-shadow: var(--shadow-md); }
+    .abb-num { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:700; line-height:1; }
+    .abb-lbl { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-top:3px; }
+    .mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .mv-card { background: var(--white); border-radius: var(--radius); padding: 2.2rem; border-top: 4px solid var(--gold); box-shadow: var(--shadow-sm); }
+    .mv-card h3 { font-family:'Cormorant Garamond',serif; font-size:1.55rem; font-weight:700; color:var(--navy); margin-bottom:1rem; }
+    .mv-card p { color:var(--text-muted); line-height:1.8; font-size:0.95rem; }
+    .faculty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1.4rem; }
+    .fac-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .fac-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); }
+    .fac-img { height:170px; overflow:hidden; }
+    .fac-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease; }
+    .fac-card:hover .fac-img img { transform:scale(1.05); }
+    .fac-body { padding:1.1rem 1.2rem 1.4rem; text-align:center; }
+    .fac-name { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:700; color:var(--navy); margin-bottom:0.25rem; }
+    .fac-role { font-size:0.74rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--gold); }
+
+    /* ── GALLERY FULL ── */
+    .gal-filter { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .gal-filter-btn { padding: 0.45rem 1.1rem; border-radius: 100px; border: 1.5px solid var(--border); font-size: 0.8rem; font-weight: 600; color: var(--text-muted); background: var(--white); cursor: pointer; transition: all 0.25s ease; }
+    .gal-filter-btn:hover, .gal-filter-btn.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .gal-full-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px,1fr)); gap: 1rem; }
+    .gal-item { aspect-ratio: 4/3; border-radius: 10px; overflow: hidden; cursor: pointer; position: relative; }
+    .gal-item img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease; }
+    .gal-item:hover img { transform:scale(1.07); }
+    .gal-item .gp-overlay { opacity:0; }
+    .gal-item:hover .gp-overlay { opacity:1; }
+
+    /* ── LIGHTBOX ── */
+    .lightbox { position: fixed; inset:0; background: rgba(5,12,28,0.92); z-index: 99999; display: none; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
+    .lightbox.open { display:flex; }
+    .lb-img { max-width: 88vw; max-height: 82vh; object-fit: contain; border-radius: 8px; box-shadow: 0 30px 80px rgba(0,0,0,0.5); }
+    .lb-close { position: absolute; top:1.5rem; right:1.5rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; width:42px; height:42px; border-radius:50%; font-size:1.1rem; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s ease; }
+    .lb-close:hover { background:rgba(255,255,255,0.2); }
+
+    /* ── INFRASTRUCTURE ── */
+    .infra-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; }
+    .infra-card { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); background: var(--white); transition: transform 0.35s ease, box-shadow 0.35s ease; }
+    .infra-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+    .infra-img { height: 200px; overflow: hidden; }
+    .infra-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease; }
+    .infra-card:hover .infra-img img { transform:scale(1.06); }
+    .infra-body { padding:1.5rem; }
+    .infra-icon { font-size:1.6rem; margin-bottom:0.6rem; }
+    .infra-title { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:700; color:var(--navy); margin-bottom:0.45rem; }
+    .infra-desc { font-size:0.875rem; color:var(--text-muted); line-height:1.65; }
+    .infra-highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 1.2rem; margin-top: 4rem; }
+    .ih-item { text-align:center; padding: 1.8rem 1.2rem; background: var(--white); border-radius:var(--radius); border:1px solid var(--border); transition:all 0.3s ease; }
+    .ih-item:hover { border-color: var(--gold); transform:translateY(-4px); box-shadow:var(--shadow-sm); }
+    .ih-icon { font-size:2rem; margin-bottom:0.6rem; }
+    .ih-val { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:700; color:var(--navy); }
+    .ih-lbl { font-size:0.78rem; color:var(--text-muted); margin-top:3px; }
+
+    /* ── CONTACT ── */
+    .contact-grid { display: grid; grid-template-columns: 420px 1fr; gap: 2.5rem; }
+    .ci-card { background: var(--navy); border-radius: var(--radius); padding: 2.4rem; color: white; position: relative; overflow: hidden; }
+    .ci-card::before { content:''; position:absolute; top:-60px; right:-60px; width:200px; height:200px; border-radius:50%; background:rgba(212,160,23,0.07); }
+    .ci-card h3 { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:700; margin-bottom:0.35rem; position:relative; }
+    .ci-subtitle { font-size:0.88rem; color:rgba(255,255,255,0.55); margin-bottom:2.2rem; }
+    .ci-item { display:flex; align-items:flex-start; gap:1rem; margin-bottom:1.6rem; }
+    .ci-item-icon { width:40px; height:40px; flex-shrink:0; background:rgba(212,160,23,0.18); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:1.05rem; }
+    .ci-item-label { font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em; color:rgba(255,255,255,0.45); margin-bottom:3px; }
+    .ci-item-val { font-size:0.93rem; color:rgba(255,255,255,0.9); line-height:1.5; }
+    .wa-btn { display:inline-flex; align-items:center; gap:8px; background:#25d366; color:white; font-weight:700; font-size:0.87rem; padding:0.7rem 1.4rem; border-radius:8px; border:none; cursor:pointer; margin-top:0.5rem; text-decoration:none; transition:all 0.3s ease; }
+    .wa-btn:hover { background:#1ebe5a; transform:translateY(-2px); }
+    .map-wrap { margin-top:1.8rem; border-radius:10px; overflow:hidden; height:200px; }
+    .map-wrap iframe { width:100%; height:100%; border:none; }
+    .cf-card { background: var(--off-white); border-radius: var(--radius); padding: 2.4rem; }
+    .cf-title { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:700; color:var(--navy); margin-bottom:0.35rem; }
+    .cf-sub { font-size:0.88rem; color:var(--text-muted); margin-bottom:2rem; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .form-group { margin-bottom:1rem; }
+    .form-label { display:block; font-size:0.76rem; font-weight:700; text-transform:uppercase; letter-spacing:0.09em; color:var(--navy); margin-bottom:0.4rem; }
+    .form-control { width:100%; padding:0.78rem 1rem; border:1.5px solid rgba(11,44,95,0.14); border-radius:8px; font-size:0.9rem; background:var(--white); color:var(--text-body); outline:none; transition:border-color 0.2s ease, box-shadow 0.2s ease; }
+    .form-control:focus { border-color:var(--navy); box-shadow:0 0 0 3px rgba(11,44,95,0.08); }
+    textarea.form-control { resize:vertical; min-height:110px; }
+    select.form-control { appearance:none; }
+    .cf-success { display:none; align-items:center; gap:10px; background:#dcfce7; color:#15803d; border:1px solid #bbf7d0; padding:0.85rem 1.2rem; border-radius:8px; font-size:0.92rem; font-weight:600; margin-top:1rem; }
+    .cf-success.show { display:flex; }
+
+    /* ── FOOTER ── */
+    .footer { background: var(--navy-dark); padding: 4.5rem 2rem 2rem; }
+    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2.2fr 1fr 1fr 1.6fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .f-brand-name { font-family:'Cinzel',serif; font-size:1.2rem; font-weight:700; color:var(--white); margin-bottom:0.2rem; }
+    .f-brand-tagline { font-family:'Cormorant Garamond',serif; font-size:0.95rem; font-style:italic; color:var(--gold); margin-bottom:1rem; }
+    .f-brand-desc { font-size:0.87rem; color:rgba(255,255,255,0.45); line-height:1.75; margin-bottom:1.5rem; }
+    .f-col h4 { font-size:0.72rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:1.2rem; }
+    .f-links li { margin-bottom:0.6rem; }
+    .f-links a { font-size:0.87rem; color:rgba(255,255,255,0.45); cursor:pointer; transition:color 0.2s ease; }
+    .f-links a:hover { color:var(--gold); }
+    .f-contact-item { display:flex; align-items:flex-start; gap:10px; margin-bottom:0.85rem; }
+    .f-contact-item .fi { color:var(--gold); flex-shrink:0; margin-top:1px; }
+    .f-contact-item span { font-size:0.87rem; color:rgba(255,255,255,0.45); line-height:1.5; }
+    .footer-bottom { max-width:1200px; margin:0 auto; padding-top:2rem; display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; color:rgba(255,255,255,0.28); }
+    .f-socials { display:flex; gap:0.6rem; }
+    .f-social-btn { width:34px; height:34px; border-radius:8px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; font-size:0.85rem; color:rgba(255,255,255,0.5); cursor:pointer; transition:all 0.25s ease; }
+    .f-social-btn:hover { background:var(--gold); color:var(--navy-dark); border-color:var(--gold); transform:translateY(-2px); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns:1fr 1fr 1fr; }
+      .footer-grid > *:first-child { grid-column:span 3; }
+      .contact-grid { grid-template-columns:1fr; }
+    }
+    @media (max-width: 900px) {
+      .about-split { grid-template-columns:1fr; gap:2rem; }
+      .mv-grid { grid-template-columns:1fr; }
+      .about-badge-box { bottom:-16px; right:-16px; }
+    }
+    @media (max-width: 768px) {
+      .nav-menu { display:none; position:absolute; top:100%; left:0; right:0; background:var(--navy-dark); flex-direction:column; padding:1rem 1.5rem 1.5rem; gap:0; border-top:1px solid rgba(255,255,255,0.08); box-shadow:0 10px 30px rgba(0,0,0,0.3); }
+      .nav-menu.open { display:flex; }
+      .nav-link { padding:0.75rem 0; width:100%; border-bottom:1px solid rgba(255,255,255,0.06); }
+      .nav-link::after { display:none; }
+      .nav-admit { display:none; }
+      .hamburger { display:flex; }
+      .gallery-preview-grid { grid-template-columns:1fr 1fr; grid-template-rows:auto; }
+      .gp-item:nth-child(1), .gp-item:nth-child(4) { grid-column:span 1; }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+      .footer-grid > *:first-child { grid-column:span 2; }
+      .footer-bottom { flex-direction:column; gap:0.5rem; text-align:center; }
+      .form-row { grid-template-columns:1fr; }
+      .hero-kpi-row { gap:1.5rem; }
+      .section { padding:4rem 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns:1fr; }
+      .footer-grid > *:first-child { grid-column:span 1; }
+      .hero-btns { flex-direction:column; }
+      .btn { justify-content:center; }
+      .gallery-preview-grid { grid-template-columns:1fr; }
+      .gp-item { height:200px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="go('home')">
+        <img class="logo-emblem" src="logo.png" alt="Logo" width="50" style="border-radius: 50%;">
+        <div class="logo-text-block">
+          <div class="l-name">Sri Krishna Academy</div>
+          <div class="l-sub">Govt. Job Coaching</div>
+        </div>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><span class="nav-link is-active" onclick="go('home')">Home</span></li>
+        <li><span class="nav-link" onclick="go('about')">About</span></li>
+        <li><span class="nav-link" onclick="go('gallery')">Gallery</span></li>
+        <li><span class="nav-link" onclick="go('infra')">Infrastructure</span></li>
+        <li><span class="nav-link" onclick="go('contact')">Contact</span></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:1rem;">
+        <a class="nav-admit" href="https://forms.gle/q9wNCW3HmVtuLjRs7" target="_blank" rel="noopener">✦ Admission Now</a>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HOME PAGE -->
+  <div id="pg-home" class="page active">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-decor">
+        <svg class="deco-feather" viewBox="0 0 280 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="140" cy="90" rx="55" ry="70" stroke="white" stroke-width="2" fill="none"/>
+          <ellipse cx="140" cy="90" rx="35" ry="46" stroke="white" stroke-width="1.5" fill="none"/>
+          <ellipse cx="140" cy="90" rx="17" ry="22" fill="white" opacity=".7"/>
+          <line x1="140" y1="158" x2="140" y2="560" stroke="white" stroke-width="2.5"/>
+          <path d="M140 180 Q110 210, 90 260" stroke="white" stroke-width="1.8" fill="none"/>
+          <path d="M140 180 Q170 210, 190 260" stroke="white" stroke-width="1.8" fill="none"/>
+          <path d="M140 230 Q100 260, 75 310" stroke="white" stroke-width="1.4" fill="none"/>
+          <path d="M140 230 Q180 260, 205 310" stroke="white" stroke-width="1.4" fill="none"/>
+          <path d="M140 290 Q95 320, 68 375" stroke="white" stroke-width="1.2" fill="none"/>
+          <path d="M140 290 Q185 320, 212 375" stroke="white" stroke-width="1.2" fill="none"/>
+          <path d="M140 355 Q92 388, 65 445" stroke="white" stroke-width="1" fill="none"/>
+          <path d="M140 355 Q188 388, 215 445" stroke="white" stroke-width="1" fill="none"/>
+          <path d="M140 420 Q90 455, 62 515" stroke="white" stroke-width=".8" fill="none"/>
+          <path d="M140 420 Q190 455, 218 515" stroke="white" stroke-width=".8" fill="none"/>
+        </svg>
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+        <div class="dot-grid">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="hero-stripe"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          A Growing Institute in Hariharpara · West Bengal
+        </div>
+        <h1 class="hero-main-title">
+          Sri Krishna
+          <span class="gold-word">Academy</span>
+        </h1>
+        <p class="hero-bengali">"<em>তোমার স্বপ্ন, আমাদের প্রতিশ্রুতি</em>"</p>
+        <p class="hero-sub">Dedicated coaching institute for government job preparation. Expert guidance · structured learning · continuous support.</p>
+        <div class="hero-btns">
+          <a class="btn btn-gold" href="https://forms.gle/q9wNCW3HmVtuLjRs7" target="_blank" rel="noopener">✦ Admission Now</a>
+          <span class="btn btn-ghost" onclick="go('contact')" style="cursor:pointer;">Contact Us &rarr;</span>
+        </div>
+
+        <!-- ═══ HERO KPIs — updated for new academy ═══ -->
+        <div class="hero-kpi-row">
+          <div class="kpi">
+            <div class="kpi-num">20+</div>
+            <div class="kpi-label">Expert Faculty</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-num">7</div>
+            <div class="kpi-label">Exam Categories</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-num">6</div>
+            <div class="kpi-label">Days / Week</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-num">100%</div>
+            <div class="kpi-label">Dedicated Support</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section why-bg">
+      <div class="section-inner">
+        <div class="sec-head center">
+          <div class="eyebrow">Why Choose Us</div>
+          <h2 class="s-title">What Makes Us <span class="em">Different</span></h2>
+          <p class="s-desc">We don't just teach — we transform aspirants into confident government officers through structured learning and relentless support.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feat-card reveal">
+            <div class="feat-icon-wrap">🎓</div>
+            <h3 class="feat-title">Expert Faculty</h3>
+            <p class="feat-desc">Seasoned educators and retired government teachers bring real-world expertise to every class, giving students an authentic edge.</p>
+          </div>
+          <div class="feat-card reveal">
+            <div class="feat-icon-wrap">🎯</div>
+            <h3 class="feat-title">Focused Classroom Environment</h3>
+            <p class="feat-desc">A disciplined and distraction-free classroom setup designed to help students concentrate better and learn effectively.</p>
+          </div>
+          <div class="feat-card reveal">
+            <div class="feat-icon-wrap">📚</div>
+            <h3 class="feat-title">Study Materials</h3>
+            <p class="feat-desc">Expert-crafted, regularly updated study notes and booklets aligned perfectly with each exam's latest syllabus and pattern.</p>
+          </div>
+          <div class="feat-card reveal">
+            <div class="feat-icon-wrap">🏆</div>
+            <h3 class="feat-title">Growing Success Journey</h3>
+            <p class="feat-desc">We are dedicated to building a strong foundation through proper guidance, regular practice, and continuous improvement to help every student achieve their goals.</p>
+          </div>
+          <div class="feat-card reveal">
+            <div class="feat-icon-wrap">📝</div>
+            <h3 class="feat-title">Weekly Mock Tests</h3>
+            <p class="feat-desc">Rigorous weekly mock tests with detailed analytics help students identify weak areas and consistently improve their scores.</p>
+          </div>
+          <div class="feat-card reveal">
+            <div class="feat-icon-wrap">🤝</div>
+            <h3 class="feat-title">Personal Mentorship</h3>
+            <p class="feat-desc">Every student receives individual attention. Daily doubt-clearing sessions and one-on-one mentorship are integral to our model.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSES -->
+    <section class="section">
+      <div class="section-inner">
+        <div class="sec-head">
+          <div class="eyebrow">Programs</div>
+          <h2 class="s-title">Our <span class="em">Courses</span></h2>
+          <p class="s-desc">Comprehensive coaching programs for every major government examination — state, central, railway, banking, police, defence and teaching.</p>
+        </div>
+        <div class="courses-grid">
+          <div class="course-card reveal">
+            <div class="cc-top">
+              <div class="cc-badge">Defence</div>
+              <div class="cc-name">Indian Defence (Army / Navy / Air Force)</div>
+            </div>
+            <div class="cc-body">
+              <ul class="cc-list">
+                <li>NDA, CDS, AFCAT preparation</li>
+                <li>Written exam + SSB guidance</li>
+                <li>Physical fitness planning</li>
+                <li>GK, Maths & English coverage</li>
+                <li>Mock tests & interview prep</li>
+              </ul>
+              <a class="btn btn-gold btn-sm" href="https://forms.gle/q9wNCW3HmVtuLjRs7" target="_blank">Enroll Now &rarr;</a>
+            </div>
+          </div>
+          <div class="course-card reveal">
+            <div class="cc-top">
+              <div class="cc-badge">State · PSC</div>
+              <div class="cc-name">WBPSC / WBCS Preparation</div>
+            </div>
+            <div class="cc-body">
+              <ul class="cc-list">
+                <li>Complete Prelims + Mains coverage</li>
+                <li>Bengali & English medium batches</li>
+                <li>Personality interview preparation</li>
+                <li>Weekly evaluation tests</li>
+                <li>Previous year paper deep dives</li>
+              </ul>
+              <a class="btn btn-gold btn-sm" href="https://forms.gle/q9wNCW3HmVtuLjRs7" target="_blank">Enroll Now &rarr;</a>
+            </div>
+          </div>
+          <div class="course-card reveal">
+            <div class="cc-top">
+              <div class="cc-badge">Central · SSC</div>
+              <div class="cc-name">SSC CGL / CHSL / MTS</div>
+            </div>
+            <div class="cc-body">
+              <ul class="cc-list">
+                <li>Tier I, II, III complete coaching</li>
+                <li>Quantitative aptitude mastery</li>
+                <li>English language & comprehension</li>
+                <li>General awareness updates</li>
+                <li>Full-length online test series</li>
+              </ul>
+              <a class="btn btn-gold btn-sm" href="https://forms.gle/q9wNCW3HmVtuLjRs7" target="_blank">Enroll Now &rarr;</a>
+            </div>
+          </div>
+          <div class="course-card reveal">
+            <div class="cc-top">
+              <div class="cc-badge">Railway · RRB</div>
+              <div class="cc-name">RRB NTPC / Group D</div>
+            </div>
+            <div class="cc-body">
+              <ul class="cc-list">
+                <li>CBT 1 & 2 focused preparation</li>
+                <li>Mathematics & reasoning shortcuts</li>
+                <li>General science & current affairs</li>
+                <li>Physical test (PET) guidance</li>
+                <li>Document verification coaching</li>
+              </ul>
+              <a class="btn btn-gold btn-sm" href="https://forms.gle/q9wNCW3HmVtuLjRs7" target="_blank">Enroll Now &rarr;</a>
+            </div>
+          </div>
+          <div class="course-card reveal">
+            <div class="cc-top">
+              <div class="cc-badge">Banking</div>
+              <div class="cc-name">Bank PO / Clerk / SO</div>
+            </div>
+            <div class="cc-body">
+              <ul class="cc-list">
+                <li>IBPS PO & SBI PO preparation</li>
+                <li>Reasoning & data interpretation</li>
+                <li>Banking awareness & GK</li>
+                <li>Descriptive writing coaching</li>
+                <li>Group discussion & interview prep</li>
+              </ul>
+              <a class="btn btn-gold btn-sm" href="https://forms.gle/q9wNCW3HmVtuLjRs7" target="_blank">Enroll Now &rarr;</a>
+            </div>
+          </div>
+          <div class="course-card reveal">
+            <div class="cc-top">
+              <div class="cc-badge">Police</div>
+              <div class="cc-name">Police SI / Constable</div>
+            </div>
+            <div class="cc-body">
+              <ul class="cc-list">
+                <li>WB Police & KP recruitment prep</li>
+                <li>Written exam coaching</li>
+                <li>Physical fitness guidance & tips</li>
+                <li>Current affairs & GK updates</li>
+                <li>Mock interview sessions</li>
+              </ul>
+              <a class="btn btn-gold btn-sm" href="https://forms.gle/q9wNCW3HmVtuLjRs7" target="_blank">Enroll Now &rarr;</a>
+            </div>
+          </div>
+          <div class="course-card reveal">
+            <div class="cc-top">
+              <div class="cc-badge">Teaching</div>
+              <div class="cc-name">WB TET / NET / SET</div>
+            </div>
+            <div class="cc-body">
+              <ul class="cc-list">
+                <li>Primary & Upper Primary TET</li>
+                <li>Child development & pedagogy</li>
+                <li>Language paper preparation</li>
+                <li>Subject-specific content coaching</li>
+                <li>Extensive practice test series</li>
+              </ul>
+              <a class="btn btn-gold btn-sm" href="https://forms.gle/q9wNCW3HmVtuLjRs7" target="_blank">Enroll Now &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS SECTION — updated for new academy -->
+    <section class="section success-bg">
+      <div class="section-inner">
+        <div class="sec-head center">
+          <div class="eyebrow">What We Offer</div>
+          <h2 class="s-title">Built for <span class="em">Excellence</span></h2>
+          <p class="s-desc">Every resource, every facility, every faculty member — assembled with a single purpose: your success.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card reveal">
+            <div class="stat-num">10+</div>
+            <div class="stat-lbl">Expert Faculty</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-num">7</div>
+            <div class="stat-lbl">Exam Categories</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-num">500+</div>
+            <div class="stat-lbl">Study Resources</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-num">6</div>
+            <div class="stat-lbl">Days / Week Classes</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-num">Smart</div>
+            <div class="stat-lbl">Learning</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-num">Fitness</div>
+            <div class="stat-lbl">Training</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY PREVIEW -->
+    <section class="section">
+      <div class="section-inner">
+        <div class="sec-head">
+          <div class="eyebrow">Gallery</div>
+          <h2 class="s-title">Life at <span class="em">Sri Krishna Academy</span></h2>
+          <p class="s-desc">A glimpse into our vibrant eco-friendly campus, focused classrooms, and the journeys of our successful students.</p>
+        </div>
+        <div class="gallery-preview-grid">
+          <div class="gp-item" onclick="openLB('classroom.png')">
+            <img src="classroom.png" alt="Smart Classroom" loading="lazy">
+            <div class="gp-overlay"><div class="gp-overlay-icon">+</div></div>
+          </div>
+          <div class="gp-item" onclick="openLB('study-hall.png')">
+            <img src="study-hall.png" alt="Study Hall" loading="lazy">
+            <div class="gp-overlay"><div class="gp-overlay-icon">+</div></div>
+          </div>
+          <div class="gp-item" onclick="openLB('library.png')">
+            <img src="library.png" alt="Library" loading="lazy">
+            <div class="gp-overlay"><div class="gp-overlay-icon">+</div></div>
+          </div>
+          <div class="gp-item" onclick="openLB('students.png')">
+            <img src="students.png" alt="Students" loading="lazy">
+            <div class="gp-overlay"><div class="gp-overlay-icon">+</div></div>
+          </div>
+          <div class="gp-item" onclick="openLB('campus.png')">
+            <img src="campus.png" alt="Campus" loading="lazy">
+            <div class="gp-overlay"><div class="gp-overlay-icon">+</div></div>
+          </div>
+          <div class="gp-item" onclick="openLB('training1.png')">
+            <img src="training1.png" alt="Training" loading="lazy">
+            <div class="gp-overlay"><div class="gp-overlay-icon">+</div></div>
+          </div>
+        </div>
+        <div class="gallery-footer">
+          <button class="btn btn-outline-navy" onclick="go('gallery')">View Full Gallery &rarr;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="section cta-bg">
+      <div class="section-inner">
+        <div class="cta-inner">
+          <img src="logo.png" alt="logo" width="50px" style="border-radius: 50%; ;">
+          <h2 class="cta-title">Your Government Job Journey<br>Begins <em>Today</em></h2>
+          <p class="cta-sub">Be among the first to join Sri Krishna Academy and get guided by expert faculty who are fully committed to your success.</p>
+          <a class="btn btn-gold" href="https://forms.gle/q9wNCW3HmVtuLjRs7" target="_blank" rel="noopener" style="font-size:0.95rem;padding:1rem 2.2rem;">
+            ✦ Apply for Admission Now
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ABOUT PAGE -->
+  <div id="pg-about" class="page">
+    <div class="inner-hero">
+      <div class="eyebrow" style="color:var(--gold);display:flex;justify-content:center;margin-bottom:.8rem;">Our Story</div>
+      <h1>About <em>Sri Krishna Academy</em></h1>
+      <p>A vision built on excellence — dedicated to turning every student's dream into a government career.</p>
+    </div>
+    <section class="section">
+      <div class="section-inner">
+        <div class="about-split">
+          <div class="about-img-block">
+            <img src="about.png" alt="Sri Krishna Academy Campus">
+            <div class="about-badge-box">
+              <div class="abb-num">2026</div>
+              <div class="abb-lbl">Est. Rukunpur</div>
+            </div>
+          </div>
+          <div>
+            <div class="eyebrow">Who We Are</div>
+            <h2 class="s-title">A New Era of <span class="em">Coaching</span></h2>
+            <p style="color:var(--text-muted);line-height:1.85;margin-bottom:1.2rem;font-size:.97rem;">
+              Sri Krishna Academy was founded with a singular, unwavering mission — to make world-class government exam coaching accessible to every deserving student across West Bengal. Born in Hariharpara, we are committed to bringing the highest standard of preparation to our community.
+            </p>
+            <p style="color:var(--text-muted);line-height:1.85;margin-bottom:1.2rem;font-size:.97rem;">
+              We believe every student carries the potential to serve their nation through a government role. Our purpose is to unlock that potential through structured learning, meticulous guidance, and relentless encouragement at every step.
+            </p>
+            <p style="color:var(--text-muted);line-height:1.85;margin-bottom:2rem;font-size:.97rem;">
+              With a team of <strong style="color:var(--navy);">10+ expert faculty</strong>, modern infrastructure, and a student-first approach — we are ready to uphold our promise every single day: <em style="color:var(--navy);">"তোমার স্বপ্ন, আমাদের প্রতিশ্রুতি."</em>
+            </p>
+            <a class="btn btn-gold" href="https://forms.gle/q9wNCW3HmVtuLjRs7" target="_blank">Join Our Academy &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="background:var(--off-white);padding-top:3rem;">
+      <div class="section-inner">
+        <div class="sec-head center">
+          <div class="eyebrow">Our Foundation</div>
+          <h2 class="s-title">Mission &amp; <span class="em">Vision</span></h2>
+        </div>
+        <div class="mv-grid">
+          <div class="mv-card reveal">
+            <h3>🎯 Our Mission</h3>
+            <p>To provide affordable, high-quality coaching that equips every student with the knowledge, skills, and confidence needed to crack competitive government examinations. We are committed to an inclusive learning environment where every student, regardless of background, gets a fair chance to achieve their dreams.</p>
+          </div>
+          <div class="mv-card reveal">
+            <h3>🌟 Our Vision</h3>
+            <p>To be West Bengal's most trusted government job coaching institute — producing not just successful candidates, but responsible officers who strengthen the nation. We envision a future where every Sri Krishna Academy student becomes a beacon of excellence and service in their field.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- GALLERY PAGE -->
+  <div id="pg-gallery" class="page">
+    <div class="inner-hero">
+      <div class="eyebrow" style="color:var(--gold);display:flex;justify-content:center;margin-bottom:.8rem;">Our Memories</div>
+      <h1>Photo <em>Gallery</em></h1>
+      <p>Classrooms, Student, Training, and Campus — moments that tell our story.</p>
+    </div>
+    <section class="section">
+      <div class="section-inner">
+        <div class="gal-filter" id="galFilter">
+          <button class="gal-filter-btn active" onclick="filterGal(this,'all')">All Photos</button>
+          <button class="gal-filter-btn" onclick="filterGal(this,'classroom')">Classrooms</button>
+          <button class="gal-filter-btn" onclick="filterGal(this,'training')">Training</button>
+          <button class="gal-filter-btn" onclick="filterGal(this,'students')">Students</button>
+          
+        </div>
+        <div class="gal-full-grid" id="galGrid"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- INFRASTRUCTURE PAGE -->
+  <div id="pg-infra" class="page">
+    <div class="inner-hero">
+      <div class="eyebrow" style="color:var(--gold);display:flex;justify-content:center;margin-bottom:.8rem;">Our Facilities</div>
+      <h1>Environment Friendly <em>Infrastructure</em></h1>
+      <p>Every facility here is designed with one purpose — helping our students succeed.</p>
+    </div>
+    <section class="section">
+      <div class="section-inner">
+        <div class="sec-head center">
+          <div class="eyebrow">Facilities</div>
+          <h2 class="s-title">Built to <span class="em">Inspire Learning</span></h2>
+          <p class="s-desc">A focused learning environment with dedicated guidance to help every student achieve success.</p>
+        </div>
+        <div class="infra-grid">
+          <div class="infra-card reveal">
+            <div class="infra-img"><img src="class.png" alt="Classroom" loading="lazy"></div>
+            <div class="infra-body"><div class="infra-icon">🎯</div><h3 class="infra-title">Focused Classroom Environment</h3><p class="infra-desc">A disciplined and distraction-free classroom setup designed to help students concentrate better and learn effectively.</p></div>
+          </div>
+          <div class="infra-card reveal">
+            <div class="infra-img"><img src="guidance.png" alt="Study Guidance" loading="lazy"></div>
+            <div class="infra-body"><div class="infra-icon">📚</div><h3 class="infra-title">Comprehensive Study Guidance</h3><p class="infra-desc">We provide structured guidance, important notes, and exam-oriented materials to help students prepare in the right direction.</p></div>
+          </div>
+          <div class="infra-card reveal">
+            <div class="infra-img"><img src="test.png" alt="Mock Tests" loading="lazy"></div>
+            <div class="infra-body"><div class="infra-icon">💻</div><h3 class="infra-title">Regular Practice & Mock Tests</h3><p class="infra-desc">Students get regular practice sessions and mock tests to improve speed, accuracy, and exam performance.</p></div>
+          </div>
+          <div class="infra-card reveal">
+            <div class="infra-img"><img src="room.png" alt="Reading Room" loading="lazy"></div>
+            <div class="infra-body"><div class="infra-icon">🏛️</div><h3 class="infra-title">Silent Reading Room</h3><p class="infra-desc">A dedicated, distraction-free self-study zone with ergonomic seating, good lighting, and a calm atmosphere available throughout the day.</p></div>
+          </div>
+          <div class="infra-card reveal">
+            <div class="infra-img"><img src="canteen.png" alt="Canteen" loading="lazy"></div>
+            <div class="infra-body"><div class="infra-icon">☕</div><h3 class="infra-title">Student Canteen</h3><p class="infra-desc">A hygienic, affordable canteen offering nutritious meals, snacks, and beverages to keep students energized through long study sessions.</p></div>
+          </div>
+          <div class="infra-card reveal">
+            <div class="infra-img"><img src="counseling.png" alt="Counseling Center" loading="lazy"></div>
+            <div class="infra-body"><div class="infra-icon">🧠</div><h3 class="infra-title">Counseling Center</h3><p class="infra-desc">Private counseling rooms for academic guidance, exam strategy advice, career path planning, and mental wellness support for all students.</p></div>
+          </div>
+        </div>
+        <div class="infra-highlights">
+          <div class="ih-item reveal"><div class="ih-icon">🏫</div><div class="ih-val">4</div><div class="ih-lbl">Classrooms</div></div>
+          <div class="ih-item reveal"><div class="ih-icon">👥</div><div class="ih-val">50+</div><div class="ih-lbl">Seating Capacity Per Batch</div></div>
+          <div class="ih-item reveal"><div class="ih-icon">📖</div><div class="ih-val">200+</div><div class="ih-lbl">Study Materials</div></div>
+          <div class="ih-item reveal"><div class="ih-icon">📝</div><div class="ih-val">Weekly Tests</div><div class="ih-lbl">Regular mock tests to improve performance.</div></div>
+          <div class="ih-item reveal"><div class="ih-icon">🎯</div><div class="ih-val">1:1 Guidance</div><div class="ih-lbl">Personal attention to help every student improve.</div></div>
+          <div class="ih-item reveal"><div class="ih-icon">📶</div><div class="ih-val">WiFi</div><div class="ih-lbl">High-Speed Campus</div></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTACT PAGE -->
+  <div id="pg-contact" class="page">
+    <div class="inner-hero">
+      <div class="eyebrow" style="color:var(--gold);display:flex;justify-content:center;margin-bottom:.8rem;">Get In Touch</div>
+      <h1>Contact <em>Us</em></h1>
+      <p>We're here to answer questions about admissions, courses, and schedules.</p>
+    </div>
+    <section class="section">
+      <div class="section-inner">
+        <div class="contact-grid">
+          <div>
+            <div class="ci-card">
+              <h3>Sri Krishna Academy</h3>
+              <p class="ci-subtitle">We typically respond within 2 hours on working days.</p>
+              <div class="ci-item">
+                <div class="ci-item-icon">📍</div>
+                <div><div class="ci-item-label">Address</div><div class="ci-item-val">Rukunpur Balarampara, Hariharpara<br>West Bengal — 747166</div></div>
+              </div>
+              <div class="ci-item">
+                <div class="ci-item-icon">📞</div>
+                <div><div class="ci-item-label">Phone</div><div class="ci-item-val">9153930362 | 9775102001 | 8167534503 (For Technical Support)</div></div>
+              </div>
+              <div class="ci-item">
+                <div class="ci-item-icon">✉️</div>
+                <div><div class="ci-item-label">Email</div><div class="ci-item-val">contact.srikrishnaacademy@gmail.com</div></div>
+              </div>
+              <div class="ci-item">
+                <div class="ci-item-icon">⏰</div>
+                <div><div class="ci-item-label">Office Hours</div><div class="ci-item-val">Mon – Sat: 8:00 AM – 8:00 PM<br>Sunday: 10:00 AM – 4:00 PM</div></div>
+              </div>
+              <a class="wa-btn" href="https://wa.me/919153930362" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Chat on WhatsApp
+              </a>
+              <div class="map-wrap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d246.17646223608196!2d88.40665551787934!3d24.0248932620642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1780106442222!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="cf-card">
+              <div class="eyebrow">Send a Message</div>
+              <h3 class="cf-title">Have a Question?</h3>
+              <p class="cf-sub">Fill in the form and our team will reach out to you shortly.</p>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-control" placeholder="Aniket" id="fn"></div>
+                <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-control" placeholder="Ghosh" id="ln"></div>
+              </div>
+              <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-control" placeholder="+91 98******10" id="ph"></div>
+              <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-control" placeholder="you@email.com" id="em"></div>
+              <div class="form-group">
+                <label class="form-label">Course Interest</label>
+                <select class="form-control" id="course">
+                  <option value="">Select a course...</option>
+                  <option>Indian Defence (Army / Navy / Air Force)</option>
+                  <option>WBPSC / WBCS</option>
+                  <option>SSC CGL / CHSL</option>
+                  <option>RRB NTPC / Group D</option>
+                  <option>Bank PO / Clerk</option>
+                  <option>Police SI / Constable</option>
+                  <option>WB TET / NET / SET</option>
+                </select>
+              </div>
+              <div class="form-group"><label class="form-label">Message</label><textarea class="form-control" id="msg" placeholder="Tell us about your exam goals and any questions you have..."></textarea></div>
+              <button class="btn btn-gold" style="width:100%;justify-content:center;font-size:0.95rem;padding:1rem;" onclick="submitForm(this)">Send Message ✦</button>
+              <div class="cf-success" id="cfSuccess">✅ &nbsp;Message sent! We'll be in touch within 2 hours.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLB(event)">
+    <button class="lb-close" onclick="closeLB(null,true)">&#10005;</button>
+    <img class="lb-img" id="lbImg" src="" alt="Gallery Image">
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="f-brand-name">Sri Krishna Academy</div>
+        <div class="f-brand-tagline">"তোমার স্বপ্ন, আমাদের প্রতিশ্রুতি"</div>
+        <p class="f-brand-desc">A dedicated coaching institute in Hariharpara for government job preparation. Transforming aspirations into achievements.</p>
+        <div class="f-socials">
+
+          <a href="https://facebook.com/yourpage" target="_blank" class="f-social-btn" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a href="https://instagram.com/yourpage" target="_blank" class="f-social-btn" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="https://youtube.com/yourchannel" target="_blank" class="f-social-btn" title="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>Quick Links</h4>
+        <ul class="f-links">
+          <li><a onclick="go('home')">Home</a></li>
+          <li><a onclick="go('about')">About Us</a></li>
+          <li><a onclick="go('gallery')">Gallery</a></li>
+          <li><a onclick="go('infra')">Infrastructure</a></li>
+          <li><a onclick="go('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Courses</h4>
+        <ul class="f-links">
+          <li><a>Indian Defence (Army/Navy/Air Force)</a></li>
+          <li><a>WBPSC / WBCS</a></li>
+          <li><a>SSC CGL / CHSL</a></li>
+          <li><a>RRB NTPC / Group D</a></li>
+          <li><a>Bank PO / Clerk</a></li>
+          <li><a>Police SI / Constable</a></li>
+          <li><a>WB TET / NET / SET</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Contact Info</h4>
+        <div class="f-contact-item"><span class="fi">📍</span><span>Rukunpur Balarampara, Hariharpara, WB — 747166</span></div>
+        <div class="f-contact-item"><span class="fi">📞</span><span>9153930362 | 9775102001 | 8167534503 (For Technical Support)</span></div>
+        <div class="f-contact-item"><span class="fi">✉️</span><span>contact.srikrishnaacademy@gmail.com</span></div>
+        <div class="f-contact-item"><span class="fi">⏰</span><span>Mon – Sat: 8 AM – 8 PM<br>Sunday: 10 AM – 4 PM</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sri Krishna Academy. All Rights Reserved.</span>
+      <span>Made with ❤️ in Hariharpara</span>
+      <span>Kuntal Ghosh · Web Developer</span>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const pageMap = { home:'pg-home', about:'pg-about', gallery:'pg-gallery', infra:'pg-infra', contact:'pg-contact' };
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function go(id) {
+      Object.values(pageMap).forEach(pid => { const el = document.getElementById(pid); if (el) el.classList.remove('active'); });
+      const target = document.getElementById(pageMap[id]);
+      if (target) target.classList.add('active');
+      const order = ['home','about','gallery','infra','contact'];
+      navLinks.forEach((l, i) => l.classList.toggle('is-active', order[i] === id));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.getElementById('navMenu').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+      setTimeout(() => { initReveal(); if (id === 'gallery') buildGallery(); }, 80);
+    }
+
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); });
+
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      const hb   = document.getElementById('hamburger');
+      menu.classList.toggle('open');
+      hb.classList.toggle('open');
+    }
+
+    function initReveal() {
+      const items = document.querySelectorAll('.page.active .reveal:not(.visible)');
+      if (!('IntersectionObserver' in window)) { items.forEach(el => el.classList.add('visible')); return; }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry, idx) => {
+          if (entry.isIntersecting) { setTimeout(() => entry.target.classList.add('visible'), idx * 70); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.08 });
+      items.forEach(el => io.observe(el));
+    }
+
+    const galleryData = [
+      { src: "classroom 1.png", tag: "classroom", label: "Classroom" },
+      { src: "classroom 2.png", tag: "classroom", label: "Classroom" },
+      { src: "classroom 3.png", tag: "classroom", label: "Classroom" },
+
+      { src: "training1.png", tag: "training", label: "Training" },
+      { src: "training2.png", tag: "training", label: "Training" },
+      { src: "training3.png", tag: "training", label: "Training" },
+
+      { src: "student1.png", tag: "students", label: "Students" },
+      { src: "student2.png", tag: "students", label: "Students" },
+      { src: "student3.png", tag: "students", label: "Students" },
+
+    ];
+
+    let galBuilt = false;
+    function buildGallery() {
+      if (galBuilt) return;
+      const grid = document.getElementById('galGrid');
+      if (!grid) return;
+      galleryData.forEach(item => {
+        const url = item.src;
+        const div = document.createElement('div');
+        div.className = 'gal-item';
+        div.dataset.tag = item.tag;
+        div.innerHTML = `<img src="${url}" alt="${item.label}" loading="lazy"><div class="gp-overlay"><div class="gp-overlay-icon">+</div></div>`;
+        div.addEventListener('click', () => openLB(url));
+        grid.appendChild(div);
+      });
+      galBuilt = true;
+    }
+
+    function filterGal(btn, tag) {
+      document.querySelectorAll('.gal-filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.gal-item').forEach(item => { item.style.display = (tag === 'all' || item.dataset.tag === tag) ? '' : 'none'; });
+    }
+
+    function openLB(src) { document.getElementById('lbImg').src = src; document.getElementById('lightbox').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeLB(e, force) {
+      if (force || (e && e.target === document.getElementById('lightbox'))) { document.getElementById('lightbox').classList.remove('open'); document.body.style.overflow = ''; }
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(null, true); });
+
+    function submitForm(btn) {
+      const orig = btn.innerHTML;
+      btn.innerHTML = '⏳ Sending...'; btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = '✓ Message Sent!'; btn.style.background = '#22c55e';
+        document.getElementById('cfSuccess').classList.add('show');
+        ['fn','ln','ph','em','course','msg'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
+        setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; btn.disabled = false; document.getElementById('cfSuccess').classList.remove('show'); }, 4000);
+      }, 1400);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => { initReveal(); navbar.classList.toggle('scrolled', window.scrollY > 60); });
+  </script>
+
+</body>
+</html>
